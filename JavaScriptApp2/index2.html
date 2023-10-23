@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style2.css">
+        <script src="http://3.125.46.56:8080/js/keycloak.js"></script>
+        <script src="file2.js"></script>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 500px;
+            }
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            tr:nth-child(even) {
+                background-color: orange;
+                color:black;
+            }
+            tr:nth-child(odd) {
+                color:black;
+            }
+        </style>
+    </head>
+    <body onload="initKeycloak()">
+        <div id="header">
+            <img id="logo" style="height: 200px; width: 200px; border-radius: 0%; padding: 15px 15px 15px 15px" src="3S.png" alt="logo 3S">
+            <h1 id="headerLabel" align="center">Welcome to Standard Sharing Software !</h1>
+        </div> 
+
+       
+        <div id="table-attr">
+            <table align="center">
+                <tr>
+                    <th style="text-align:center;">Attributes</th>
+                    <th style="text-align:center;">Value</th>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">Username</td>
+                    <td id="row-username" style="text-align:center;">${user.username}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">First Name</td>
+                    <td id="row-firstName" style="text-align:center;">${user.username}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">Last Name</td>
+                    <td id="row-lastName" style="text-align:center;">${user.username}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">Name</td>
+                    <td id="row-name" style="text-align:center;">${user.fullName}</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center;">Email</td>
+                    <td id="row-email" style="text-align:center;">${user.email}</td>
+                </tr>
+            </table>
+        </div>
+        <div d="content" style="width:20%; margin:100px auto;">
+           
+            <div>
+                <textarea id="ta-token">EMPTY</textarea>
+                <textarea id="ta-refreshToken">EMPTY</textarea>
+            </div>
+
+            <input type="button" value="LOGOUT" onclick="logout()" />
+        </div>        
+    </body>
+</html>

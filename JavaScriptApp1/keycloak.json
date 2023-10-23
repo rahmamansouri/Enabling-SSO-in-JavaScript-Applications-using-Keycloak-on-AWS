@@ -1,0 +1,12 @@
+{ 
+  "realm": "JavascriptApplications",
+  "auth-server-url": "http://3.125.46.56:8080/",
+  "ssl-required": "none",
+  "resource": "JavaScriptApplication1",
+  "public-client": true,
+  "confidential-port":0
+
+
+
+
+}
